@@ -1,0 +1,27 @@
+{
+  "name": "stress-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/artillery/bin/artillery run test.json",
+    "test-report": "./node_modules/artillery/bin/artillery run -o test-report test.json",
+    "report-html": "./node_modules/artillery/bin/artillery report test-report",
+    "version": "./node_modules/artillery/bin/artillery --version",
+    "dino": "./node_modules/artillery/bin/artillery dino",
+    "help": "./node_modules/artillery/bin/artillery help"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lemontech119/stress-test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lemontech119/stress-test/issues"
+  },
+  "homepage": "https://github.com/lemontech119/stress-test#readme",
+  "dependencies": {
+    "artillery": "^2.0.0-5"
+  }
+}

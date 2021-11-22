@@ -1,0 +1,26 @@
+{
+  "config": {
+      "target": "http://127.0.0.1:3000",
+      "phases": [
+          {"duration": 30, "arrivalRate": 20}
+      ],
+      "defaults": {
+          "headers": {
+              "User-Agent": "Artillery",
+              "authorization": ""
+          }
+      }
+  },
+  "scenarios": [
+      {
+          "name": "유저테스트",
+          "flow": [
+              {"get":
+                  {
+                      "url": "/api"
+                  }
+              }
+          ]
+      }
+  ]
+}
