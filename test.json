@@ -1,26 +1,31 @@
 {
-  "config": {
-      "target": "http://127.0.0.1:3000",
-      "phases": [
-          {"duration": 30, "arrivalRate": 20}
-      ],
-      "defaults": {
-          "headers": {
-              "User-Agent": "Artillery",
-              "authorization": ""
-          }
-      }
-  },
-  "scenarios": [
-      {
-          "name": "유저테스트",
-          "flow": [
-              {"get":
-                  {
-                      "url": "/api"
+    "config": {
+        "target": "http://3.36.213.7:3000",
+        "phases": [
+            {"duration": 90, "arrivalRate": 15}
+        ],
+        "defaults": {
+            "headers": {
+                "User-Agent": "Artillery",
+                "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdG9yZU1hbmFnZXJJZCI6NDAwMywiZGV2aWNlSWQiOiJlYjRtaGRmMVNrVzRmUUUwb0FiUVdOOkFQQTkxYkdGdlFTclJqV182d1d1Z2MtNzNXYXphSHh5WmxtVVNsTEYtWkJJQ05uaUxTZHhiR2liSk1yT1RoWW1rdm9zMXUxU0xySm5wNXloUEhta3BpcThNZnZ5N2dpaXBzZzZGX2NJUzFNNmZ4YUN2X1VMRmowVlhkUTVmQzNjbjNVa1I1MlFOamRSIiwicGhvbmVOdW1iZXIiOiIwMTA1NDM0MTg0NiIsImlhdCI6MTYzNzU3OTUxOCwiZXhwIjoxNjY5MTE1NTE4fQ.dM9tNEeTL7LNdiN0K-PA39LC29nm1F3s9Ls1wzkoDq4"
+            }
+        }
+    },
+    "scenarios": [
+        {
+            "name": "유저테스트",
+            "flow": [
+                {
+                  "get": {
+                        "url": "/api/product/list"
+                    }
+                },
+                {
+                  "get": {
+                    "url": "/api/report?dateFrom=20211121"
                   }
-              }
-          ]
-      }
-  ]
-}
+                }
+            ]
+        }
+    ]
+  }
